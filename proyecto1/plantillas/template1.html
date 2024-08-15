@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> HOLA ESTE ES MI TITULO</h1>
+    <p>Hola plantilla xd</p>
+
+    <p style="color: red;">Mi nombre es {{nombre}} </p> // LAS VARIABLES VIENEN DE LAS CLAVES DEL DICCIONARIO
+
+    <p style="color: green;"> Mi apellido es: {{apellido}}</p>
+
+    <p style="color: violet;"> ESTE TEMPLATE FUE CREADO: {{hoy}}</p>
+
+    <p>ESTAS SON LAS NOTAS POSIBLES:</p>
+    <P>
+        {%for n in notas%}
+        {{n}}
+        {% endfor %}
+    </P>
+
+    <p>{%for n in notas%}
+            {% if n <= 4 %}
+
+                <p style="color: red;">DESAPROBADO {{n}}</p>
+
+                {%else%}<p style="color: green;"> APROBADO {{n}}</p>
+
+            {%endif%}
+
+
+        {%endfor%}
+
+
+    </p>
+</body>
+</html>
